@@ -1,0 +1,45 @@
+<!-- templates/inventory/vendor_detail.html -->
+
+{% extends 'base_generic.html' %}
+
+{% block title %}Vendor Details{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2 class="mb-4">Vendor Details</h2>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ vendor.name }}</h5>
+                    <p class="card-text"><strong>Email:</strong> {{ vendor.email }}</p>
+                    <p class="card-text"><strong>Website:</strong> <a href="{{ vendor.website }}" target="_blank">{{ vendor.website }}</a></p>
+                    <p class="card-text"><strong>Phone Number:</strong> {{ vendor.phone_number }}</p>
+                    <p class="card-text"><strong>Last Review Date:</strong> {{ vendor.last_review_date }}</p>
+                    <p class="card-text"><strong>Description:</strong></p>
+                    <p>{{ vendor.description }}</p>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Products</h5>
+                    <ul class="list-group">
+                        {% for product in products %}
+                        <li class="list-group-item">{{ product.name }}</li>
+                        {% empty %}
+                        <li class="list-group-item">No products found.</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+            <!-- Sidebar content can be added here -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+

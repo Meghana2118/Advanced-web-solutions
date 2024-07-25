@@ -1,0 +1,28 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Vendor List{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="text-center mb-4">Vendor List</h2>
+        <form method="get" class="mb-4">
+          <div class="form-group">
+            {{ filter.form.as_p }}
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <ul class="list-group">
+          {% for vendor in filter.qs %}
+            <li class="list-group-item">
+              <a href="{% url 'vendor_detail' vendor.pk %}">{{ vendor.name }}</a>
+            </li>
+          {% empty %}
+            <li class="list-group-item">No vendors found.</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}

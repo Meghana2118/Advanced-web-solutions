@@ -1,0 +1,44 @@
+<!-- templates/inventory/create_product.html -->
+
+{% extends 'base_generic.html' %}
+
+{% block title %}Create Product{% endblock %}
+
+{% block content %}
+<h2>Create Product</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+        <label for="{{ form.name.id_for_label }}">Name:</label>
+        {{ form.name }}
+    </div>
+    <div>
+        <label for="{{ form.description.id_for_label }}">Description:</label>
+        {{ form.description }}
+    </div>
+    <div>
+        <label for="{{ form.documentation.id_for_label }}">Documentation:</label>
+        {{ form.documentation }}
+    </div>
+    <div>
+        <label for="{{ form.image_link.id_for_label }}">Image Link:</label>
+        {{ form.image_link }}
+    </div>
+    <div>
+        <label for="{{ form.vendor.id_for_label }}">Vendor:</label>
+        {{ form.vendor }}
+    </div>
+    <button type="submit">Create Product</button>
+</form>
+
+{% if form.errors %}
+    <p>There were errors in the form:</p>
+    <ul>
+        {% for field in form %}
+            {% for error in field.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

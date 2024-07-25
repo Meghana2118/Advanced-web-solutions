@@ -1,0 +1,83 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Product List{% endblock %}
+
+{% block content %}
+<title>Vendor Application - Product Page</title>
+<style>
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f0f0f0;
+ }
+ 
+ header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px 20px;
+     text-align: center;
+ }
+ 
+ main {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     margin-top: 20px;
+ }
+ 
+ .product-image {
+     margin-right: 20px;
+ }
+ 
+ .product-details {
+     background-color: #fff;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+     width: 300px;
+ }
+ 
+ button {
+     background-color: #007bff;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     cursor: pointer;
+     border-radius: 5px;
+ }
+ 
+ button:hover {
+     background-color: #0056b3;
+ }
+ 
+</style>
+</head>
+<body>
+ <header>
+     {% for product in products %}
+ </header>
+ 
+ <main><ul>
+    <li>
+     <div class="product-image">
+         <img src="{{ product.image_link }}" alt="Product Image" width="300" height="200">
+     </div>
+     <div class="product-details">
+         <h2>Product Name: {{ product.name }}</h2>
+         <p>Vendor Name: {{ product.vendor }}</p>
+         {% if product.description %}
+         <p> Product Description: {{ product.description }}</p>
+     {% endif %}
+     </li>
+     </div>
+ </main>
+ {% empty %}
+        <li>No products found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+

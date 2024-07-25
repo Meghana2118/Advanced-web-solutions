@@ -1,0 +1,307 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+
+    <title>About Us - VendorApp</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+
+  
+.about {
+            background: rgb(224, 251, 222);
+            background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
+            padding: 100px 0 20px 0;
+            text-align: center;
+        }
+
+        .about h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1rem;
+            color: #323030;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-info {
+            margin: 2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .about-img {
+            width: 20rem;
+            height: 20rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: contain;
+        }
+
+        .about-info p {
+            font-size: 1.3rem;
+            margin: 0 2rem;
+            text-align: justify;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            font-size: 1rem;
+            color: white;
+            background-color: #40b736;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1f9405;
+        }
+
+        .team {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .team h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+       
+        .team-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Align cards to the center */
+            gap: 15px; /* Spacing between cards */
+            margin-top: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: calc(33.33% - 30px); /* Adjust width here based on desired layout */
+            max-width: 18rem; /* Limit maximum width */
+            margin-top: 10px;
+        }
+        @media (max-width: 1200px) {
+            .card {
+                width: calc(50% - 30px); /* Two cards per row on medium screens */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                width: calc(100% - 30px); /* Single card per row on small screens */
+            }
+        }
+        
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 12rem;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 15px;
+        }
+
+        .card-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card-info p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .card-info button {
+            margin: 2rem 1rem;
+        }
+
+        .card-name {
+            font-size: 1.25rem;
+            margin: 10px 0;
+        }
+
+        .card-role {
+            font-size: 1rem;
+            color: #888;
+            margin: 5px 0;
+        }
+
+        .card-email {
+            font-size: 1rem;
+            color: #555;
+        }
+
+
+        @media (max-width: 768px) {
+
+.about h1 {
+    font-size: 2rem;
+}
+
+.about p {
+    font-size: 0.9rem;
+}
+
+.about-info {
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-img {
+    width: 60%;
+    height: 60%;
+    margin-bottom: 1rem;
+}
+
+.about-info p {
+    margin: 1rem 2rem;
+}
+
+.about-info button {
+    margin: 1rem 2rem;
+    width: 10rem;
+}
+
+.team {
+    margin: 0 1rem;
+}
+}
+    </style>
+</head>
+
+<body>
+    
+
+    <section class="about">
+        <h1>About Us</h1>
+        <p style="font-weight: bold">Welcome to VendorApp!</p>
+        <div class="about-info">
+            <div class="about-img">
+                <img src="https://law.asia/wp-content/uploads/2022/08/Incentivisation-of-green-technologies-in-India.jpg" alt="VendorInventoryPro">
+            </div>
+            <div>
+                <p>VendorApp was founded by a team of seasoned professionals with extensive experience in supply chain management, technology, and business operations. We recognized the challenges that businesses face in keeping track of their inventory and managing relationships with multiple vendors. Our solution was to create a robust, user-friendly platform that addresses these pain points head-on.</p>
+            </div>
+        </div>
+    </section>
+<section>
+    <div class ="container">
+ <div class="row">
+   
+        <div class="col md">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.careedge.in/assets/images/what-we-offer.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">What We Offer</h5>
+          <ul>
+            <li>Comprehensive Inventory Management</li>
+            <li>Vendor Relationship Management</li>
+            <li>Reporting & Analytics</li>
+            <li>User-Friendly Interface</li>
+        </ul>
+    </div>
+        </div>
+      </div>
+     <div class="col-lg">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://thumbs.dreamstime.com/b/handwriting-text-writing-our-mission-concept-meaning-tasks-schedule-need-to-made-them-right-order-success-woman-wear-161510246.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Our Mission</h5>
+          <p>At Vendor Management Application, our mission is to simplify and streamline the process of managing vendors for businesses of all sizes. We aim to provide innovative tools and solutions that enhance efficiency and collaboration.</p>
+        </div>
+      </div>
+    </div>
+    
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://9253440.fs1.hubspotusercontent-na1.net/hubfs/9253440/man%20and%20woman%20brainstorming%20on%20a%20computer%20(1).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Our Values</h5>
+          <ul>
+            <li>Customer-Centric Approach</li>
+            <li>Innovation</li>
+            <li>Integrity</li>
+        </ul>
+        </div>
+      </div>
+    </div>  
+
+</div>
+</div>
+</section>
+    <section class="team">
+        <h1>Meet Our Team</h1>
+        <div class="team-cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPht50tR5aqojpK13ZEzffw7LRoKCQ3gMV-467Un2uZHiYxRVZ6WE_xRLWrjC552I6mvY&usqp=CAU" alt="Jane">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Jane</h2>
+                    <p class="card-role">CEO and Founder</p>
+                    <p class="card-email">jane@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.playground.com/7492c6c3c58c41f5b23b4b7404f4e5c2.jpeg" alt="Miller">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Miller</h2>
+                    <p class="card-role">Co-Founder</p>
+                    <p class="card-email">miller@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO76L0eALXNAFtAYe4A2zMSUaEsozgMAab87fp4se0Jd6SUxFkc4Vf6GMnaIhN-8DCrWA&usqp=CAU" alt="Joe">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Joe</h2>
+                    <p class="card-role">Co-Founder</p>
+                    <p class="card-email">joe@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+{% endblock %}
